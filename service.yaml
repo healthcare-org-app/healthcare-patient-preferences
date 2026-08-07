@@ -1,0 +1,11 @@
+name: patient-preferences-service
+port: 8103
+lang: python
+description: "patient-preferences-service \u2014 domain: patients"
+http_deps:
+- patients-service
+- audit-log-service
+publishes:
+- audit.event
+subscribes:
+- patient.created
